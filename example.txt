@@ -1,0 +1,41 @@
+import console;
+
+class Main
+{
+    private testNumber: int; // "int" meint Integer der Plattformgröße -> Int32 oder Int64
+    private isTest = true; // Wenn der Typ klar ist, muss nichts angegeben werden.
+
+    constructor ()
+    {
+        var math = new Math(); // "var" bestimmt den Typen anhand der rechten Seite selbst.
+
+        var sum = math.sum(2, 3);
+
+        Console.writeLine(sum);
+
+        var n: int;
+
+        n = 5;
+    }
+}
+
+class Math ()
+{
+    constructor ()
+    {
+        // Wird aufgerufen, wenn man "var math = new Math();" ausführt.
+    }
+
+    destructor ()
+    {
+        // Wird aufgerufen, wenn man "delete math;" ausführt oder der Sichtbarkeitsbereich von "math" verlassen wird.
+        // Alternativ: Zusätzlich zur Sichtbarkeit könnte man auch die letzte Nutzung im Quelltext in Betracht ziehen...
+    }
+
+    public sum (a: int, b: int): int
+    {
+        var result = a + b;
+
+        return result;
+    }
+}
