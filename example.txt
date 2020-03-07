@@ -7,15 +7,15 @@ class Main
 
     constructor ()
     {
-        var math = new Math(); // "var" bestimmt den Typen anhand der rechten Seite selbst.
+        var math := new Math(); // "var" bestimmt den Typen anhand der rechten Seite selbst.
 
-        var sum = math.sum(2, 3);
+        var sum := math.sum(2, 3);
 
         Console.writeLine(sum);
 
         var n: Int;
 
-        n = 5;
+        n := 5;
     }
 }
 
@@ -23,7 +23,7 @@ class Math ()
 {
     constructor ()
     {
-        // Wird aufgerufen, wenn man "var math = new Math();" ausführt.
+        // Wird aufgerufen, wenn man "var math := new Math();" ausführt.
     }
 
     destructor ()
@@ -34,7 +34,7 @@ class Math ()
 
     public sum (a: Int, b: Int): Int
     {
-        var result = a + b;
+        var result := a + b;
 
         return result;
     }
