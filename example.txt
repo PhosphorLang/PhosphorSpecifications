@@ -2,7 +2,7 @@ import console;
 
 class Main
 {
-    private testNumber: int; // "int" meint Integer der Plattformgröße -> Int32 oder Int64
+    private testNumber: Int; // "Int" meint Integer der Plattformgröße -> Int32 oder Int64
     private isTest = true; // Wenn der Typ klar ist, muss nichts angegeben werden.
 
     constructor ()
@@ -13,7 +13,7 @@ class Main
 
         Console.writeLine(sum);
 
-        var n: int;
+        var n: Int;
 
         n = 5;
     }
@@ -32,7 +32,7 @@ class Math ()
         // Alternativ: Zusätzlich zur Sichtbarkeit könnte man auch die letzte Nutzung im Quelltext in Betracht ziehen...
     }
 
-    public sum (a: int, b: int): int
+    public sum (a: Int, b: Int): Int
     {
         var result = a + b;
 
