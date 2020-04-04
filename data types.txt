@@ -4,11 +4,11 @@ Int16       2 Byte vorzeichenbehafteter Ganzzahlwert
 Int32       4 Byte vorzeichenbehafteter Ganzzahlwert
 Int64       8 Byte vorzeichenbehafteter Ganzzahlwert
 
-UInt         Plattformabhängiger vorzeichenloser Ganzzahlwert (1, 2, 4 oder 8 Byte)
-UInt8        1 Byte vorzeichenloser Ganzzahlwert
-UInt16       2 Byte vorzeichenloser Ganzzahlwert
-UInt32       4 Byte vorzeichenloser Ganzzahlwert
-UInt64       8 Byte vorzeichenloser Ganzzahlwert
+UInt        Plattformabhängiger vorzeichenloser Ganzzahlwert (1, 2, 4 oder 8 Byte)
+UInt8       1 Byte vorzeichenloser Ganzzahlwert
+UInt16      2 Byte vorzeichenloser Ganzzahlwert
+UInt32      4 Byte vorzeichenloser Ganzzahlwert
+UInt64      8 Byte vorzeichenloser Ganzzahlwert
 
 Float       Plattformabhängiger Fließkommawert (2, 4 oder 8 Byte)
 (Float16)   2 Byte Fließkommawert
