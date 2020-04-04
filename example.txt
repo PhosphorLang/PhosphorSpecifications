@@ -3,7 +3,7 @@ import console;
 class Main
 {
     private testNumber: Int; // "Int" meint Integer der Plattformgröße -> Int32 oder Int64
-    private isTest = true; // Wenn der Typ klar ist, muss nichts angegeben werden.
+    private isTest := true; // Wenn der Typ klar ist, muss nichts angegeben werden.
 
     constructor ()
     {
