@@ -16,8 +16,8 @@ Float32     4 Byte Fließkommawert
 Float64     8 Byte Fließkommawert
 
 Bool        1 Byte Wahrheitswert
-Bool16      2 Byte Wahrheitswert
-Bool32      4 Byte Wahrheitswert
-Bool64      8 Byte Wahrheitswert
+(Bool16)    2 Byte Wahrheitswert
+(Bool32)    4 Byte Wahrheitswert
+(Bool64)    8 Byte Wahrheitswert
 
 String      Zeichenfolge mit variabler Länge
