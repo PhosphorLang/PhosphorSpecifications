@@ -2,18 +2,19 @@ import console;
 
 class Main
 {
-    private testNumber: Int; // "Int" meint Integer der Plattformgröße -> Int32 oder Int64
-    private isTest := true; // Wenn der Typ klar ist, muss nichts angegeben werden.
+    private testNumber: Int;
+    private isTest := true; // Automatic type determination by the initialisation.
+    private testString: Float64 := 1; // Optional explicit type definition to overwrite the automatic determination.
 
     constructor ()
     {
-        var math := new Math(); // "var" bestimmt den Typen anhand der rechten Seite selbst.
+        var math := new Math(); // "var" with automatic type determination by the initialisation.
 
         var sum := math.sum(2, 3);
 
         Console.writeLine(sum);
 
-        var n: Int;
+        var n: Int; // If there is no initialisation, the type must be explicitely defined.
 
         n := 5;
     }
@@ -23,13 +24,13 @@ class Math ()
 {
     constructor ()
     {
-        // Wird aufgerufen, wenn man "var math := new Math();" ausführt.
+        // Is called by "var math := new Math();".
     }
 
     destructor ()
     {
-        // Wird aufgerufen, wenn man "delete math;" ausführt oder der Sichtbarkeitsbereich von "math" verlassen wird.
-        // Alternativ: Zusätzlich zur Sichtbarkeit könnte man auch die letzte Nutzung im Quelltext in Betracht ziehen...
+        // Is called by "delete math;" or when "math" leaves the scope.
+        // Alternatively, the last usage of the variable instead of scope leave could be the point of destruction.
     }
 
     public sum (a: Int, b: Int): Int
@@ -39,7 +40,7 @@ class Math ()
         return result;
     }
 
-    public isEqual (a: Int, b: Int): Bool // TODO: Lieber kurze (Bool, Int, Str) oder lange (Boolean, Integer, String) Namen?
+    public isEqual (a: Int, b: Int): Bool
     {
         var result := a = b;
 

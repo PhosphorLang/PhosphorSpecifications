@@ -1,23 +1,23 @@
-Int         Plattformabhängiger vorzeichenbehafteter Ganzzahlwert (1, 2, 4 oder 8 Byte)
-Int8        1 Byte vorzeichenbehafteter Ganzzahlwert
-Int16       2 Byte vorzeichenbehafteter Ganzzahlwert
-Int32       4 Byte vorzeichenbehafteter Ganzzahlwert
-Int64       8 Byte vorzeichenbehafteter Ganzzahlwert
+Int         Platform dependend signed integer (1, 2, 4 or 8 Byte)
+Int8        1 Byte signed integer
+Int16       2 Byte signed integer
+Int32       4 Byte signed integer
+Int64       8 Byte signed integer
 
-UInt        Plattformabhängiger vorzeichenloser Ganzzahlwert (1, 2, 4 oder 8 Byte)
-UInt8       1 Byte vorzeichenloser Ganzzahlwert
-UInt16      2 Byte vorzeichenloser Ganzzahlwert
-UInt32      4 Byte vorzeichenloser Ganzzahlwert
-UInt64      8 Byte vorzeichenloser Ganzzahlwert
+UInt        Platform dependend unsigned integer (1, 2, 4 or 8 Byte)
+UInt8       1 Byte unsigned integer
+UInt16      2 Byte unsigned integer
+UInt32      4 Byte unsigned integer
+UInt64      8 Byte unsigned integer
 
-Float       Plattformabhängiger Fließkommawert (2, 4 oder 8 Byte)
-(Float16)   2 Byte Fließkommawert
-Float32     4 Byte Fließkommawert
-Float64     8 Byte Fließkommawert
+Float       Platform dependend floating point number (2, 4 or 8 Byte)
+(Float16)   2 Byte floating point number
+Float32     4 Byte floating point number
+Float64     8 Byte floating point number
 
-Bool        1 Byte Wahrheitswert
-(Bool16)    2 Byte Wahrheitswert
-(Bool32)    4 Byte Wahrheitswert
-(Bool64)    8 Byte Wahrheitswert
+Bool        1 Byte truth value
+(Bool16)    2 Byte truth value
+(Bool32)    4 Byte truth value
+(Bool64)    8 Byte truth value
 
-String      Zeichenfolge mit variabler Länge
+String      Character sequence with variable length
