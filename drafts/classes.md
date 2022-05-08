@@ -9,10 +9,10 @@ class Greeter
 
     public constructor (whomToGreet: String)
     {
-        greeting = 'Hello, ' + whomToGreet + '!';
+        this.greeting := 'Hello ' + whomToGreet + '!';
     }
 
-    public greet (): String
+    public method greet (): String
     {
         return greeting;
     }
@@ -20,7 +20,7 @@ class Greeter
 
 function main ()
 {
-    var greeter = new Greeter('world);
+    var greeter := Greeter('world);
 
     greeter.greet();
 }
@@ -34,7 +34,7 @@ Class members are private by default.
 
 ### Private
 
-If a member is marked as "private"  it is only accessible form inside the class.
+If a member is marked as "private"  it is only accessible from inside the class.
 
 ### Public
 
