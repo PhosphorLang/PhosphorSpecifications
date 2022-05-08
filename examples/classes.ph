@@ -4,7 +4,7 @@ static class Math
 {
     public static add (a: Int, b: Int): Int
     {
-        var result = a + b;
+        var result := a + b;
 
         return result;
     }
@@ -19,7 +19,7 @@ class Counter
 
     public constructor ()
     {
-        counter = 0;
+        counter := 0;
     }
 
     public increment ()
@@ -30,13 +30,13 @@ class Counter
 
 function main (arguments: String[]): Int
 {
-    var sum = Math.add(2, 4);
+    var sum := Math.add(2, 4);
 
-    var counter = new Counter();
+    var counter := new Counter();
 
     counter.increment();
 
-    var result = sum + counter.value;
+    var result := sum + counter.value;
 
     return result;
 }
