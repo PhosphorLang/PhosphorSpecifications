@@ -3,7 +3,7 @@
 ## Focus
 
 Understandability -> Reading and understanding of code should be as easy as possible. \
-Predictability -> Suprises are bad, determinism is good. \
+Predictability -> Surprises are bad, determinism is good. \
 Safety -> Type and memory safety help preventing errors; to shoot oneself in the foot should be explicit. \
 Performance -> As fast as possible without sacrificing understandability, predictability or safety.
 
