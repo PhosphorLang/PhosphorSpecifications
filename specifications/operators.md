@@ -10,6 +10,7 @@ Unary plus | +a
 Unary minus | -a
 Multiplication | a * b
 Division | a / b
+Exponentiation | a ^ b
 
 ## Comparison operators
 
