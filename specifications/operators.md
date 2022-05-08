@@ -30,12 +30,12 @@ Name | Syntax
 NOT | !a
 AND | a & b
 OR | a \| b
-XOR | a ^ b
 
-## Bitwise operators
+## Additional bitwise operators
 
 Name | Syntax
  --- | -----
+XOR | a >< b
 Left shift | a << b
 Right shift | a >> b
 
