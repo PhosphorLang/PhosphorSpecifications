@@ -1,4 +1,4 @@
-import console;
+import 'console';
 
 static class Math
 {
@@ -22,9 +22,9 @@ class Counter
         counter = 0;
     }
 
-    public inc ()
+    public increment ()
     {
-        counter++;
+        counter += 1;
     }
 }
 
@@ -34,7 +34,7 @@ function main (arguments: String[]): Int
 
     var counter = new Counter();
 
-    counter.inc();
+    counter.increment();
 
     var result = sum + counter.value;
 

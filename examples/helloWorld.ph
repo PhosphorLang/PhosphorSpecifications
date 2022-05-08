@@ -1,6 +1,6 @@
+import 'console';
+
 function main ()
 {
-    print('Hello world!');
-
-    return;
+    Console.writeLine('Hello world!');
 }
