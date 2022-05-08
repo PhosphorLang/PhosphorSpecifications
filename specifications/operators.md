@@ -10,8 +10,6 @@ Unary plus | +a
 Unary minus | -a
 Multiplication | a * b
 Division | a / b
-Increment | a++
-Decrement | a--
 
 ## Comparison operators
 
