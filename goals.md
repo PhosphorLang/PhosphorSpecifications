@@ -6,7 +6,7 @@ Type safety \
 Memory safety \
 Performance \
 Simplicity \
-Elegancy \
+Elegancy
 
 ## Preferences
 
