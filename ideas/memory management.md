@@ -1,54 +1,46 @@
 # Memory Management
 
-## Definitions
+## General
 
-- "Passing the stack *down*" -> Passing as a parameter of a function.
-- "Passing the stack *up*" -> Passing as a return value of a function.
-- "Leaving the stack" -> Assignment as a property of an object.
+### Owner
 
-## Stack objects
+The owner of an object is either a function or another object.
+
+If the owner of the object is a function, it is created in its stack frame. The owner function has to allocate the memory and either create the object in it itself or pass the memory area to a function which returns the object (either by creating it in the transferred memory area or by calling a function itself which returns the object).
+
+If the owner of the object is another object, it is created on the heap. The memory is allocated by the function that creates the object. Such an object must be assigned as a property to the owner object. At the end of the owner object's life, the destructor of the object is automatically called and the memory is released.
+
+## In functions
+
+### Stack objects
 
 ```phosphor
 var object := Object();
+
+// function end
 ```
 
-Memory allocation of: "object".
-Created on the stack.
+Memory allocation of "object" on the stack. \
+The object is owned by the function. \
+When the function ends, the destructor of the object is automatically called and the memory is released.
 
-May be given *down* the stack.
-Must **not** be given *up* the stack.
-Must **not** leave the stack.
+Stack objects may be passed as parameters to functions. \
+Assignment as a property of an object is prohibited. \
+If the function returns the object as a return value, the calling function must make the allocation in its own stack frame and the called function must create the object in this memory area. The pointer to the memory area is stored in the register of the return value. Afterwards, the object belongs to the caller function.
 
-## Heap objects
+### Heap objects
 
 ```phosphor
-class object
-{
-    public heapObject: HeapObject;
+var object := Object();
 
-    constructor ()
-    {
-        heapObject := HeapObject();
-    }
-}
+anotherObject.objectReference := object;
+
+// Function end
 ```
 
-Memory allocation of: "heapObject".
-Created on the heap.
+Memory allocation of "object" on the heap. \
+The object belongs to "anotherObject" to which it was allocated. Thus "anotherObject" is the owner object of "object". \
+At the end of the function, **no** memory is released and no destructor is called.
 
-May be passed *down* the stack.
-Must be passed *up* the stack.
-Must **not** leave the stack.
-
-## Parameter
-
-```phosphor
-function (object: Object);
-```
-
-**No** memory allocation of: "object".
-Created on stack or heap before the call.
-
-May be passed *down* the stack.
-May be passed *up* the stack.
-Must **not** leave the stack.
+Heap objects may be passed as parameters to functions or assigned to the property of an object. \
+Passing as a return value of the function is done by a pointer to the heap object. The object then **does not** belong to the caller function but continues to belong to the owner object.
