@@ -3,7 +3,7 @@
 ## Overview
 
 ```phosphor
-module Standard.Io;
+public module Standard.Io;
 
 public external function readLine (): String;
 public external function writeLine (text: String);
@@ -57,14 +57,27 @@ The exact paths and the file system are irrelevant for importing. The compiler a
 
 ## Access Modifiers
 
-Access modifiers can be used for every member of a module. The default access modifier is `private`. \
-There are the following access modifiers:
+### Module Access Modifiers
+
+The following access modifiers are valid for modules:
 | Modifier | Accessable from |
 | - | - |
 | `public` | Everywhere |
 | `internal` | From inside the same top-level namespace (same as `public` if the module has no namespace) |
-| `protected` | From inside the same class or from inside a class that inherits from this class (not applicable for modules) |
+
+The default module access modifier is `internal`.
+
+### Member Access Modifiers
+
+The following access modifiers are valid for members:
+| Modifier | Accessable from |
+| - | - |
+| `public` | Everywhere |
+| `internal` | From inside the same top-level namespace (same as `public` if the module has no namespace) |
+| `protected` | From inside the same class or from inside a class that inherits from this class (only applicable for class members) |
 | `private` | Only from within the module |
+
+The default member access modifier is `private`.
 
 ## Language Namespaces
 
