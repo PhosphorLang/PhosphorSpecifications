@@ -47,7 +47,7 @@ Classes are special types of modules (with the main difference in being instanti
 Namespaces can consist of one or several levels (example: `MyProgramme.Utility.Math`). \
 The top-level namespace is the first of these levels (here: `MyProgramme`). \
 Additionally, a namespace can have a prefix (example: `MyCompany.MyDepartment:MyProgramme.Utility`), which is placed before the top-level namespace and seperated by a colon. Prefixes can be nested the same way as namespaces. \
-Prefixes can be used to group namespaces together without compromising the `internal` access modifier.
+Prefixes can be used to group namespaces together without compromising the `public` access modifier. `public` modules are only accessable from modules with the same top-level namespace and the same prefix.
 
 ## Import
 
@@ -62,20 +62,20 @@ The exact paths and the file system are irrelevant for importing. The compiler a
 The following access modifiers are valid for modules:
 | Modifier | Accessable from |
 | - | - |
-| `public` | Everywhere |
-| `internal` | From inside the same top-level namespace (same as `public` if the module has no namespace) |
+| `published` | Everywhere, includig from other namespaces |
+| `public` | From inside the same top-level namespace (same as `published` if the module has no namespace) |
+| `protected` | From inside the same namespace, including below (same as `private` if the module has no namespace) |
+| `private` | Only from within the module |
 
-The default module access modifier is `internal`.
+The default module access modifier is `private`.
 
 ### Member Access Modifiers
 
-The following access modifiers are valid for members:
+All module access modifiers are valid for class members. \
+Additionally, class members can have these access modifiers:
 | Modifier | Accessable from |
 | - | - |
-| `public` | Everywhere |
-| `internal` | From inside the same top-level namespace (same as `public` if the module has no namespace) |
-| `protected` | From inside the same class or from inside a class that inherits from this class (only applicable for class members) |
-| `private` | Only from within the module |
+| `internal` | From inside the same class or from inside a class that inherits from this class |
 
 The default member access modifier is `private`.
 
