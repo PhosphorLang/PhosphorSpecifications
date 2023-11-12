@@ -5,8 +5,8 @@
 ```phosphor
 public module Standard.Io;
 
-public external function readLine (): String;
-public external function writeLine (text: String);
+public header function readLine (): String;
+public header function writeLine (text: String);
 ```
 
 ```phosphor
