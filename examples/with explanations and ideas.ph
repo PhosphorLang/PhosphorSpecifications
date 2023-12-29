@@ -4,7 +4,7 @@ class Math ()
 {
     constructor ()
     {
-        // Is called by "var math := new Math();".
+        // Is called by "let math := new Math();".
     }
 
     destructor ()
@@ -15,14 +15,14 @@ class Math ()
 
     public sum (a: Int, b: Int): Int
     {
-        var result := a + b;
+        let result := a + b;
 
         return result;
     }
 
     public isEqual (a: Int, b: Int): Bool
     {
-        var result := a = b;
+        let result := a = b;
 
         return result;
     }
@@ -36,13 +36,13 @@ class Main
 
     constructor ()
     {
-        var math := new Math(); // "var" with automatic type determination by the initialisation.
+        let math := new Math(); // "let" with automatic type determination by the initialisation.
 
         testNumber := math.sum(2, 3); // Class members must either be initialised when defined or inside the constructor.
 
         Console.writeLine(sum);
 
-        var n: Int; // If there is no initialisation, the type must be explicitely defined.
+        let n: Int; // If there is no initialisation, the type must be explicitely defined.
 
         n := 5;
     }

@@ -29,11 +29,11 @@ public function main ()
     Io.writeLine('Hello world!');
     MyIo.writeLine('Hello world!');
 
-    var networkConnection = new Network.Connection();
-    var myNetworkConnection = new MyNetwork.Connection();
+    let networkConnection = new Network.Connection();
+    let myNetworkConnection = new MyNetwork.Connection();
 
-    var connection = new Connection();
-    var myConnection = new MyConnection();
+    let connection = new Connection();
+    let myConnection = new MyConnection();
 }
 ```
 

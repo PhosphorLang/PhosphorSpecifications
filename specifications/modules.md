@@ -25,8 +25,8 @@ public function main ()
     Io.writeLine('Hello world!');
     MyIo.writeLine('Hello world!');
 
-    var networkConnection = new Network.Connection();
-    var myNetworkConnection = new MyNetwork.Connection();
+    let networkConnection = new Network.Connection();
+    let myNetworkConnection = new MyNetwork.Connection();
 }
 ```
 

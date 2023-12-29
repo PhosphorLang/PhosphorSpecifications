@@ -20,7 +20,7 @@ class Greeter
 
 function main ()
 {
-    var greeter := Greeter('world);
+    let greeter := Greeter('world);
 
     greeter.greet();
 }

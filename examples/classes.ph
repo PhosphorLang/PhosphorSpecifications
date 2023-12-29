@@ -4,7 +4,7 @@ static class Math
 {
     public static add (a: Int, b: Int): Int
     {
-        var result := a + b;
+        let result := a + b;
 
         return result;
     }
@@ -30,13 +30,13 @@ class Counter
 
 function main (arguments: String[]): Int
 {
-    var sum := Math.add(2, 4);
+    let sum := Math.add(2, 4);
 
-    var counter := new Counter();
+    let counter := new Counter();
 
     counter.increment();
 
-    var result := sum + counter.value;
+    let result := sum + counter.value;
 
     return result;
 }
