@@ -2,7 +2,7 @@ import 'console';
 
 static class Math
 {
-    public static add (a: Int, b: Int): Int
+    public static add (a: Integer, b: Integer): Integer
     {
         let result := a + b;
 
@@ -12,7 +12,7 @@ static class Math
 
 class Counter
 {
-    private counter: Int
+    private counter: Integer
     {
         public get;
     }
@@ -28,7 +28,7 @@ class Counter
     }
 }
 
-function main (arguments: String[]): Int
+function main (arguments: String[]): Integer
 {
     let sum := Math.add(2, 4);
 

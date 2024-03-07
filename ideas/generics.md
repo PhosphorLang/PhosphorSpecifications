@@ -6,10 +6,10 @@
 class Vector;
 generics Type, constant size: UInt;
 
-let vector := Vector[Int, 8];
+let vector := Vector[Integer, 8];
 ```
 
-Here, the class `Vector` is generic. It has two generic parameters: `Type` and `size`. The first one is a type parameter, the second one a constant parameter. Both are known at compile time and are part of the type of the class. As such, the type of `vector` is `Vector[Int, 8]`.
+Here, the class `Vector` is generic. It has two generic parameters: `Type` and `size`. The first one is a type parameter, the second one a constant parameter. Both are known at compile time and are part of the type of the class. As such, the type of `vector` is `Vector[Integer, 8]`.
 
 ## Function Example
 
