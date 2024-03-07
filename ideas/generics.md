@@ -3,10 +3,8 @@
 ## Class Example
 
 ```phosphor
-class Vector [Type, constant size: UInt]
-{
-    ...
-}
+class Vector;
+generics Type, constant size: UInt;
 
 let vector := Vector[Int, 8];
 ```
